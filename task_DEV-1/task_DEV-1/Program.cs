@@ -2,7 +2,7 @@
 
 namespace task_DEV_1
 {
-    class Program                                       // class which find maximum number of identical consecutive characters in a string
+    class MaximumNuber                                       // Class which find maximum number of identical consecutive characters in a string
     {
         static void Main(string[] args)
         {
