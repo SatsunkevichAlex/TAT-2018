@@ -4,9 +4,8 @@ namespace task_DEV_1
 {
     class MaximumNuber                                       // Class which find maximum number of identical consecutive characters in a string
     {
-        static void Main(string[] args)
+        static void Main(string[] character_sequence)
         {
-            string character_sequence = Console.ReadLine();
             int count = 0;
             for (int i = 0; i < character_sequence.Length; i++)
             {
@@ -25,6 +24,7 @@ namespace task_DEV_1
                 }
             }
             Console.WriteLine($"The maximum number of identical consecutive characters in a string = {count}");
+            Console.ReadKey();
         }
     }
 }
