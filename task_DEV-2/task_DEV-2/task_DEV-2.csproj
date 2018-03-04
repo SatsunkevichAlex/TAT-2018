@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B8D1BD5-4CAB-4AFB-B1D7-3CE36B8AB644}</ProjectGuid>
+    <ProjectGuid>{72B044F5-A92A-41DE-A05A-E4BEFF562EB3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TaskDev1</RootNamespace>
-    <AssemblyName>TaskDev1</AssemblyName>
+    <RootNamespace>task_DEV_2</RootNamespace>
+    <AssemblyName>task_DEV-2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="EqualSymbolsCounter.cs" />
+    <Compile Include="StringCreater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
