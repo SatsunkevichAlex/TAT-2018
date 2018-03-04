@@ -6,7 +6,7 @@ namespace task_DEV_2
     /// <summary>
     /// This class for work with sequances
     /// </summary>
-    class EvenCharacters
+    class StringCreater
     {
         /// <summary>
         /// Enter Sequance
@@ -20,7 +20,7 @@ namespace task_DEV_2
         /// <summary>
         /// This method displays even-numbered charachters
         /// </summary>
-        public void WriteEvenCharachters ()
+        public void WriteEvenCharacters()
         {
             for (int i = 1; i < currentString.Length; i = i + 2)
             {

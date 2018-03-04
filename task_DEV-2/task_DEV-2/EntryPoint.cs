@@ -7,9 +7,9 @@
     {
         static void Main(string[] args)
         {
-            EvenCharacters sequence = new EvenCharacters();
+            StringCreater sequence = new StringCreater();
             sequence.EnterSequance();
-            sequence.WriteEvenCharachters();
+            sequence.WriteEvenCharacters();
         }
     }
 }
