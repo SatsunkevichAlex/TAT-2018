@@ -2,9 +2,6 @@
 
 namespace task_DEV_3
 {
-    /// <summary>
-    /// Entry point in programm
-    /// </summary>
     class EntryPoint
     {
         static void Main(string[] args)

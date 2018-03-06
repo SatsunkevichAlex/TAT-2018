@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace task_DEV_3
 {
@@ -11,22 +12,27 @@ namespace task_DEV_3
         /// This method convert convert integer numbers to a new scale of notation
         /// and display it
         /// </summary>
-        /// <param name="NumberToChange"></param>
-        /// <param name="SystemBase"></param>
+        /// <param name="NumberToChange">Initial arguments.</param>
+        /// <param name="SystemBase">Initial arguments.</param>
         public void ConverterToNewNumberSystem(int NumberToChange, int SystemBase)
         {
-            string ReversedNewNumber = "";
-            int NumberOfNewNumeral;
-            while (NumberToChange != 0)
+            StringBuilder NewNumber = new StringBuilder();
+            while (NumberToChange > 0)
             {
-                NumberOfNewNumeral = NumberToChange % SystemBase;
+                int remainder = NumberToChange % SystemBase;
+                if (remainder >= 10)
+                {
+                    char letter = (char)(55 + remainder);
+                    NewNumber.Insert(0, letter);
+                }
+                else
+                {
+                    NewNumber.Insert(0, remainder);
+                }
+
                 NumberToChange /= SystemBase;
-                ReversedNewNumber += Convert.ToString(NumberOfNewNumeral);
             }
-            for (int i = ReversedNewNumber.Length - 1; i >= 0; i--)
-            {
-                Console.Write($"{ReversedNewNumber[i]}");
-            }
+            Console.Write(NewNumber.ToString());
         }
     }
 }
