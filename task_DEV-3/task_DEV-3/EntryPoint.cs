@@ -9,15 +9,15 @@ namespace task_DEV_3
     {
         static void Main(string[] args)
         {
-            int inputNumber;
-            int baseOfNewSystem;
-            bool CheckNumber = Int32.TryParse(args[0], out inputNumber);
-            bool CheckFormatBase = Int32.TryParse(args[1], out baseOfNewSystem);
-            bool CheckIntervalBase = baseOfNewSystem >= 2 && baseOfNewSystem <= 20;
+            int InputNumber;
+            int BaseOfNewSystem;
+            bool CheckNumber = Int32.TryParse(args[0], out InputNumber);
+            bool CheckFormatBase = Int32.TryParse(args[1], out BaseOfNewSystem);
+            bool CheckIntervalBase = BaseOfNewSystem >= 2 && BaseOfNewSystem <= 20;
             if (CheckNumber && CheckFormatBase && CheckIntervalBase)
             {
                 ConverterNewNumberSystem converter = new ConverterNewNumberSystem();
-                converter.ConverterToNewNumberSystem(inputNumber, baseOfNewSystem);
+                converter.ConverterToNewNumberSystem(InputNumber, BaseOfNewSystem);
             }
             else
             {
