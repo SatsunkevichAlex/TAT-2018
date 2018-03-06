@@ -27,7 +27,6 @@ namespace task_DEV_3
             {
                 Console.Write($"{ReversedNewNumber[i]}");
             }
-            
         }
     }
 }
