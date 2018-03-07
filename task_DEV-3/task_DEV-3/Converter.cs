@@ -29,7 +29,6 @@ namespace task_DEV_3
                 {
                     NewNumber.Insert(0, remainder);
                 }
-
                 NumberToChange /= SystemBase;
             }
             return NewNumber.ToString();
