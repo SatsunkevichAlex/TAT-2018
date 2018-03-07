@@ -8,18 +8,32 @@ namespace task_DEV_3
         {
             int InputNumber;
             int BaseOfNewSystem;
-            bool CheckNumber = Int32.TryParse(args[0], out InputNumber);
-            bool CheckFormatBase = Int32.TryParse(args[1], out BaseOfNewSystem);
-            bool CheckIntervalBase = BaseOfNewSystem >= 2 && BaseOfNewSystem <= 20;
-            if (CheckNumber && CheckFormatBase && CheckIntervalBase)
+            try
             {
-                ConverterNewNumberSystem converter = new ConverterNewNumberSystem();
-                converter.ConverterToNewNumberSystem(InputNumber, BaseOfNewSystem);
+                InputNumber = Int32.Parse(args[0]);
+                BaseOfNewSystem = Int32.Parse(args[1]);
             }
-            else
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input!");
+                return;
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("Invalid input!");
+                return;
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Invalid input!");
+                return;
+            }
+            if (Convert.ToInt16(args[1]) < 2 && Convert.ToInt16(args[1]) > 20)
             {
                 Console.WriteLine("Invalid input!");
             }
+            Converter Converter = new Converter();
+            Console.WriteLine(Converter.ToNewNumberSystem(InputNumber, BaseOfNewSystem));
         }
     }
 }
