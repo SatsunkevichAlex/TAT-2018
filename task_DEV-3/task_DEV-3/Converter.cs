@@ -9,7 +9,7 @@ namespace task_DEV_3
     class Converter
     {
         /// <summary>
-        /// This method convert integer numbers to a new scale of notation
+        /// This method converts integer numbers to a new scale of notation
         /// </summary>
         /// <param name="NumberToChange">Initial arguments.</param>
         /// <param name="SystemBase">Initial arguments.</param>
