@@ -8,6 +8,7 @@ namespace task_DEV_3
         {
             int InputNumber;
             int BaseOfNewSystem;
+
             try
             {
                 InputNumber = Int32.Parse(args[0]);
@@ -28,10 +29,12 @@ namespace task_DEV_3
                 Console.WriteLine("Invalid input!");
                 return;
             }
+
             if (Convert.ToInt16(args[1]) < 2 && Convert.ToInt16(args[1]) > 20)
             {
                 Console.WriteLine("Invalid input!");
             }
+
             Converter Converter = new Converter();
             Console.WriteLine(Converter.ToNewNumberSystem(InputNumber, BaseOfNewSystem));
         }
