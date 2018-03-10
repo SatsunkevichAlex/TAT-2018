@@ -6,13 +6,18 @@ namespace task_DEV_3
     {
         static void Main(string[] args)
         {
-            int InputNumber;
-            int BaseOfNewSystem;
-
             try
             {
+                if (Convert.ToInt16(args[1]) < 2 && Convert.ToInt16(args[1]) > 20)
+                {
+                    Console.WriteLine("Invalid input!");
+                }
+                int InputNumber;
+                int BaseOfNewSystem;
                 InputNumber = Int32.Parse(args[0]);
                 BaseOfNewSystem = Int32.Parse(args[1]);
+                Converter Converter = new Converter();
+                Console.WriteLine(Converter.ToNewNumberSystem(InputNumber, BaseOfNewSystem));
             }
             catch (FormatException)
             {
@@ -29,14 +34,6 @@ namespace task_DEV_3
                 Console.WriteLine("Invalid input!");
                 return;
             }
-
-            if (Convert.ToInt16(args[1]) < 2 && Convert.ToInt16(args[1]) > 20)
-            {
-                Console.WriteLine("Invalid input!");
-            }
-
-            Converter Converter = new Converter();
-            Console.WriteLine(Converter.ToNewNumberSystem(InputNumber, BaseOfNewSystem));
         }
     }
 }
