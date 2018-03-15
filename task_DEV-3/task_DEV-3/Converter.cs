@@ -6,7 +6,7 @@ namespace task_DEV_3
     /// <summary>
     /// This is a class for convert integer numbers to a new scale of notation
     /// </summary>
-    class Converter
+    public class Converter
     {
         /// <summary>
         /// This method converts integer numbers to a new scale of notation
