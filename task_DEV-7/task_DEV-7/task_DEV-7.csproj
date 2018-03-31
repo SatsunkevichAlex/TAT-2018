@@ -46,16 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyType.cs" />
-    <Compile Include="ClimateControl.cs" />
-    <Compile Include="CommandReceiver.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="CarsCatalog.cs" />
+    <Compile Include="CreateCarsCatalog.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="CarCreator.cs" />
     <Compile Include="Car.cs" />
-    <Compile Include="ConcreteCommand.cs" />
+    <Compile Include="GetFilterParameters.cs" />
+    <Compile Include="FilterParameters.cs" />
     <Compile Include="ICommand.cs" />
-    <Compile Include="Interior.cs" />
+    <Compile Include="Invoker.cs" />
     <Compile Include="LamborghiniCreator.cs" />
     <Compile Include="Lamborghini.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,7 +62,6 @@
     <Compile Include="Ferrari.cs" />
     <Compile Include="Tesla.cs" />
     <Compile Include="TeslaCreator.cs" />
-    <Compile Include="Transmission.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

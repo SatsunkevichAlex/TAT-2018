@@ -3,7 +3,7 @@
 namespace task_DEV_7
 {
     /// <summary>
-    /// Interface wich provid command
+    /// Interface wich provide command
     /// </summary>
     public interface ICommand
     {

@@ -12,6 +12,10 @@ namespace task_DEV_7
         {
             Name = n;
         }
+        /// <summary>
+        /// Abstract facrory method
+        /// </summary>
+        /// <returns>Object Car</returns>
         public abstract Car Create();
     }
 }

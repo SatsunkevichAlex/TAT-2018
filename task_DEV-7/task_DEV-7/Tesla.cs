@@ -6,13 +6,13 @@ namespace task_DEV_7
     {
         public override string Mark { get; set; } = "Tesla";
         public override string Model { get; set; } = "Model S";
-        public override int Power { get; set; } = 322;
-        public override double Capacity { get; set; } = 85;
-        Engine engine = new Engine("Electric");
-        BodyType bodyType = new BodyType("Station wagon");
-        Transmission transmission = new Transmission("Automatic");
-        Interior interior = new Interior("Textile");
-        ClimateControl climateControl = new ClimateControl("Climate control");
+        public override string Power { get; set; } = "322";
+        public override string Capacity { get; set; } = "85";
+        public override string BodyType { get; set; } = "Station wagon";
+        public override string Engine { get; set; } = "Electric";
+        public override string Interior { get; set; } = "Textile";
+        public override string Transmission { get; set; } = "Automatic";
+        public override string ClimateControl { get; set; } = "Climate control";
         public Tesla(string mark)
         {
             Mark = mark;

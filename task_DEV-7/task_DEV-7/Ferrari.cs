@@ -9,13 +9,13 @@ namespace task_DEV_7
     {
         public override string Mark { get; set; } = "Ferrari";
         public override string Model { get; set; } = "California";
-        public override int Power { get; set; } = 460;
-        public override double Capacity { get; set; } = 4.3;
-        Engine engine = new Engine("Disel");
-        BodyType bodyType = new BodyType("Coupe");
-        Transmission transmission = new Transmission("Manual");
-        Interior interior = new Interior("Leather");
-        ClimateControl climateControl = new ClimateControl("Conditioner");
+        public override string Power { get; set; } = "460";
+        public override string Capacity { get; set; } = "4.3";
+        public override string BodyType { get; set; } = "Coupe";
+        public override string Engine { get; set; } = "Disel";
+        public override string Interior { get; set; } = "Leather";
+        public override string Transmission { get; set; } = "Manual";
+        public override string ClimateControl { get; set; } = "Conditioner";
 
         public Ferrari(string mark)
         {

@@ -15,7 +15,7 @@ namespace task_DEV_7
         /// <returns>Car Tesla</returns>
         public override Car Create()
         {
-            return new Tesla("Model S");
+            return new Tesla("Tesla");
         }
     }
 }

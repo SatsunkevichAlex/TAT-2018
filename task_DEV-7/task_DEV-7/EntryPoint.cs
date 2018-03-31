@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Web.Script.Serialization;
 using System.IO;
-using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace task_DEV_7
 {
@@ -9,18 +10,21 @@ namespace task_DEV_7
     {
         static void Main(string[] args)
         {
-            CarCreator creator = new LamborghiniCreator("Car Lamborghini");
-            Car lamborghini = creator.Create();
+            Invoker invoker = new Invoker();
 
-            creator = new FerrariCreator("Car Ferrari");
-            Car ferrari = creator.Create();
+            FilterParameters filterParameters = new FilterParameters();
+            GetFilterParameters getFilterParameteres = new GetFilterParameters(filterParameters);
+            invoker.SetCommand(getFilterParameteres);
+            invoker.Run();
 
-            creator = new TeslaCreator("Car Tesla");
-            Car tesla = creator.Create();
+            CarsCatalog carsCatalog = new CarsCatalog();
+            CreateCarsCatalog createCarsCatalog = new CreateCarsCatalog(carsCatalog);
+            invoker.SetCommand(createCarsCatalog);
+            invoker.Run();
 
             JavaScriptSerializer ser = new JavaScriptSerializer();
-            string car1 = ser.Serialize(lamborghini);
-            File.WriteAllText("Car catalog", car1);
+            string catalog = ser.Serialize(carsCatalog.Catalog());
+            File.WriteAllText("Cars catalog.json", catalog);
         }
     }
 }
