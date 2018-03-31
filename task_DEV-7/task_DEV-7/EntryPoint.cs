@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace task_DEV_7
 {
