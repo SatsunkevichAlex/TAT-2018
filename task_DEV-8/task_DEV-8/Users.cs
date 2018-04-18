@@ -17,6 +17,5 @@ namespace task_DEV_8
         //InformationInput informationinputUser1 = new InformationInput(user1);
         //invoker.SetCommand(informationinputUser1);
         //invoker.Run();
-
     }
 }

@@ -16,7 +16,6 @@ namespace task_DEV_8
         {
             user = u;
         }
-
         /// <summary>
         /// Execute first name input command
         /// </summary>
