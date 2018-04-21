@@ -1,26 +1,11 @@
 ﻿using System;
 
-<<<<<<< HEAD
-namespace Classwork1_06._04._2018_
-=======
 namespace ConsoleApplication1
->>>>>>> 9fa8514317cd7b11b51fd2bd98a049fc8557a0a7
 {
     class Program
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Autohouse autohous = new Autohouse();
-
-            foreach (Car b in autohous)
-            {
-                Console.WriteLine(b.Model);
-            }
-        }
-    }
-}
-=======
             Counter c = new Counter(new Random().Next(10));
             c.ThresholdReached += c_ThresholdReached;
             c.ThresholdReached2 += u_ThresholdReached;
@@ -100,4 +85,4 @@ namespace ConsoleApplication1
         public DateTime TimeReached { get; set; }
     }
 }
->>>>>>> 9fa8514317cd7b11b51fd2bd98a049fc8557a0a7
+// Домашнее задание. Когда колличество машин бмв 10, информируются любители бмв, когда больше 20 машин мередес информируются марседес любители.
