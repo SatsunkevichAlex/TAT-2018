@@ -56,10 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="HomePage.cs" />
-    <Compile Include="Locators.cs" />
+    <Compile Include="Locators\LastDialogLocators.cs" />
+    <Compile Include="Locators\MessagesPageLocators.cs" />
+    <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="Locators\HomePageLocators.cs" />
+    <Compile Include="Locators\RegistrationPageLocators.cs" />
+    <Compile Include="PageObjects\LastDialogPage.cs" />
+    <Compile Include="PageObjects\MessagesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrationPage.cs" />
+    <Compile Include="PageObjects\RegistrationPage.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
