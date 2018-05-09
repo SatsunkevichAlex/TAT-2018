@@ -23,7 +23,7 @@ namespace task_DEV_9
         /// <param name="driver"></param>
         /// <param name="homePageLocators"></param>
         /// <param name="wait"></param>
-        /// <returns>MessagePage</returns>
+        /// <returns>MessagesPage</returns>
         public MessagesPage GoToMessagesPage(IWebDriver driver, HomePageLocators homePageLocators, WebDriverWait wait)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(homePageLocators.massagesLocator)).Click();

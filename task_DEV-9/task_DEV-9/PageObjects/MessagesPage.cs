@@ -7,6 +7,9 @@ using System.Threading;
 
 namespace task_DEV_9.PageObjects
 {
+    /// <summary>
+    /// Messages Page.
+    /// </summary>
     public class MessagesPage
     {
         IWebDriver driver;
@@ -21,7 +24,7 @@ namespace task_DEV_9.PageObjects
         /// <param name="driver"></param>
         /// <param name="messagesPageLocators"></param>
         /// <param name="wait"></param>
-        /// <returns>LastDialogPage</returns>
+        /// <returns>LastDialogPage.</returns>
         public LastDialogPage GoToLastDialog(IWebDriver driver, MessagesPageLocators messagesPageLocators, WebDriverWait wait)
         {
             IWebElement lastDialog = wait.Until(ExpectedConditions.ElementToBeClickable(messagesPageLocators.lastDialogLocator));

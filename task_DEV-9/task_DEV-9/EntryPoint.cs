@@ -1,9 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Support.UI;
-using System.Threading;
 using task_DEV_9.PageObjects;
 using task_DEV_9.Locators;
 
@@ -31,7 +29,6 @@ namespace task_DEV_9
             LastDialogLocators lastDialogLocators = new LastDialogLocators();
             Console.WriteLine("Last mesage : " + lastDialogPage.GetTextOfLastMessage(driver, lastDialogLocators, wait));
 
-            Thread.Sleep(4000);
             driver.Quit();
         }
     }

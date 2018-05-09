@@ -6,7 +6,7 @@ using OpenQA.Selenium.Support.PageObjects;
 namespace task_DEV_9
 {
     /// <summary>
-    /// Registration page 
+    /// Registration page.
     /// </summary>
     public class RegistrationPage
     {
@@ -17,7 +17,7 @@ namespace task_DEV_9
             this.driver = driver;
         }
         /// <summary>
-        /// Register user
+        /// Register user.
         /// </summary>
         /// <param name="user"></param>
         public void RegisterUser(User user, WebDriverWait wait, RegistrationPageLocators locators)
@@ -28,12 +28,12 @@ namespace task_DEV_9
             wait.Until(ExpectedConditions.ElementToBeClickable(locators.myProfileLocator)).Click();
         }
         /// <summary>
-        /// Seccesfull registration
+        /// Seccesfull registration.
         /// </summary>
         /// <param name="user"></param>
         /// <param name="wait"></param>
         /// <param name="locators"></param>
-        /// <returns>Homepage</returns>
+        /// <returns>Homepage.</returns>
         public HomePage RegistrationUserSuccesful(User user, WebDriverWait wait, RegistrationPageLocators registrationPageLocators)
         {
             RegisterUser(user, wait, registrationPageLocators);
