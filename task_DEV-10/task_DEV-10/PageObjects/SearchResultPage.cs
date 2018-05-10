@@ -29,6 +29,5 @@ namespace task_DEV_10.PageObjects
         {
             return driver.FindElements(searchResultPageLocators.brandAndModelOfCars);
         }
-
     }
 }

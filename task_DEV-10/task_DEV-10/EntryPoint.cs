@@ -12,9 +12,8 @@ namespace task_DEV_10
     {
         static void Main(string[] args)
         {
-            string interestedBrand = "BMW";
-            //string interestedBrand = args [0];
-            //Console.WriteLine("Interested car brand" + interestedBrand);
+            string interestedBrand = args [0];
+            Console.WriteLine("Interested car brand" + interestedBrand);
 
             IWebDriver driver = new FirefoxDriver();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
