@@ -3,9 +3,13 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using task_DEV_10.PageObjectsLocators;
+using System.Collections.Generic;
 
 namespace task_DEV_10.PageObjects
 {
+    /// <summary>
+    /// Search result page.
+    /// </summary>
     public class SearchResultPage
     {
         IWebDriver driver;
@@ -15,15 +19,16 @@ namespace task_DEV_10.PageObjects
             this.driver = driver;
         }
         /// <summary>
-        /// Get all cars on page.
+        /// Get brand and model of cars on page.
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="wait"></param>
         /// <param name="searchResultPageLocators"></param>
-        /// <returns>All cars on page.</returns>
-        public IWebElement GetAllCarsOnPage(IWebDriver driver, WebDriverWait wait, SearchResultPageLocators searchResultPageLocators)
+        /// <returns>List of brands and models of cars on page.</returns>
+        public IList<IWebElement> GetBrandAndModelOfCarsOnPage(IWebDriver driver, WebDriverWait wait, SearchResultPageLocators searchResultPageLocators)
         {
-            return wait.Until(ExpectedConditions.ElementIsVisible(searchResultPageLocators.carsOnPage));
+            return driver.FindElements(searchResultPageLocators.brandAndModelOfCars);
         }
+
     }
 }

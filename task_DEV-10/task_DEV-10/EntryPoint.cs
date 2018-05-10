@@ -3,8 +3,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using task_DEV_10.PageObjects;
-using System.Threading;
 using task_DEV_10.PageObjectsLocators;
+using System.Collections.Generic;
 
 namespace task_DEV_10
 {
@@ -25,10 +25,12 @@ namespace task_DEV_10
             HomePageLocators homePageLocators = new HomePageLocators();
             SearchResultPage searchResultPage = homePage.FindInterestBrand(driver, homePageLocators, wait, interestedBrand);
             SearchResultPageLocators searchResultPageLocators = new SearchResultPageLocators();
-            IWebElement carsOnPage = searchResultPage.GetAllCarsOnPage(driver, wait, searchResultPageLocators);
+            IList<IWebElement> brandAndModelOfCarsOnPage = searchResultPage.GetBrandAndModelOfCarsOnPage(driver, wait, searchResultPageLocators);
+            foreach (IWebElement carBrandAndModel in brandAndModelOfCarsOnPage)
+            {
+                Console.WriteLine(carBrandAndModel.Text);
+            }
 
-
-            Thread.Sleep(5000);
             driver.Quit();
         }
     }

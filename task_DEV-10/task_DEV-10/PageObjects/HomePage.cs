@@ -33,7 +33,7 @@ namespace task_DEV_10.PageObjects
         /// <param name="homePageLocators"></param>
         /// <param name="wait"></param>
         /// <param name="interestedBrand"></param>
-        /// <returns>SearchResultPage</returns>
+        /// <returns>SearchResultPage.</returns>
         public SearchResultPage FindInterestBrand(IWebDriver driver, HomePageLocators homePageLocators, WebDriverWait wait, string interestedBrand)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(homePageLocators.brandSearchFilterParameter)).Click();
