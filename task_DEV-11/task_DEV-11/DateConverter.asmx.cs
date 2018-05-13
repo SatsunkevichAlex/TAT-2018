@@ -23,16 +23,18 @@ namespace task_DEV_11
         [WebMethod]
         public int ConvertDateIntoDays(int year, int month, int day)
         {
+            int daysInLeapYears = 0;
+            int daysInYears = 0;
+            int daysInMonth = 0;
+
             double leapYears = year / 4;
             leapYears = Math.Floor(leapYears);
-            int daysInLeapYears = (int)leapYears * 366;
+            daysInLeapYears = (int)leapYears * 366;
 
             year -= (int)leapYears;
-            int daysInYears = year * 365;
+            daysInYears = year * 365;
 
-
-            int daysInMonth = 0;
-            switch(month)
+            switch (month)
             {
                 case 1:
                     daysInMonth = 31;

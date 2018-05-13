@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B20AF829-2CD7-44C7-A1C8-D720294775EA}</ProjectGuid>
+    <ProjectGuid>{1B70148A-02AF-475B-AAFE-19BE51CD7F90}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WebServiceConsumer</RootNamespace>
-    <AssemblyName>WebServiceConsumer</AssemblyName>
+    <RootNamespace>WebService.UnitTests</RootNamespace>
+    <AssemblyName>WebService.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -40,7 +40,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,53 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
+    <Compile Include="DateConverterTests.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\DateConverter\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\DateConverter\DateConverter.wsdl" />
-    <None Include="Web References\DateConverter\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:53010/DateConverter.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\DateConverter\</RelPath>
-      <UpdateFromURL>http://localhost:53010/DateConverter.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>WebServiceConsumer_DateConverter_DateConverter</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\DateConverter\DateConverter.disco" />
+    <ProjectReference Include="..\task_DEV-11\WebService.csproj">
+      <Project>{ebafb880-5f8a-4f03-9570-8a0a3ac7690c}</Project>
+      <Name>WebService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServiceConsumer\WebServiceConsumer.csproj">
+      <Project>{b20af829-2cd7-44c7-a1c8-d720294775ea}</Project>
+      <Name>WebServiceConsumer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

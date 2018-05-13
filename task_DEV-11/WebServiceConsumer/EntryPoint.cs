@@ -43,11 +43,11 @@ namespace task_DEV_11
                     throw new Exception("Incorrect date entered!");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            
+
             Console.WriteLine("Days from Jesus birth : {0}", service.ConvertDateIntoDays(year, month, day));
         }
     }
