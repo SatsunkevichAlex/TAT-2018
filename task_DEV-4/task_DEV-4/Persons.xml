@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<head>
+  <Person id="0">
+    <Name>Pavel</Name>
+    <Surname>Kovalchuk</Surname>
+    <Age>25</Age>
+  </Person>
+  
+  <Person id="1">
+    <Name>Tina</Name>
+    <Surname>Brejneva</Surname>
+    <Age>47</Age>
+  </Person>
+
+  <Person id="2">
+    <Name>Anton</Name>
+    <Surname>Sevel</Surname>
+    <Age>67</Age>
+  </Person>
+
+  <Person id="3">
+    <Name>Karmen</Name>
+    <Surname>Stepanenko</Surname>
+    <Age>32</Age>
+  </Person>
+
+  <Person id="4">
+    <Name>Egor</Name>
+    <Surname>Pavlov</Surname>
+    <Age>14</Age>
+  </Person>
+</head>
