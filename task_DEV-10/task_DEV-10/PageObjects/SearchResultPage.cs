@@ -1,6 +1,5 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using task_DEV_10.PageObjectsLocators;
 using System.Collections.Generic;
@@ -15,7 +14,6 @@ namespace task_DEV_10.PageObjects
         IWebDriver driver;
         public SearchResultPage(IWebDriver driver)
         {
-            PageFactory.InitElements(driver, this);
             this.driver = driver;
         }
         /// <summary>

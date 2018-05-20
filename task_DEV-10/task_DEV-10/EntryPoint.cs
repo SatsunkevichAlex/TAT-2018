@@ -12,25 +12,33 @@ namespace task_DEV_10
     {
         static void Main(string[] args)
         {
-            string interestedBrand = args [0];
-            Console.WriteLine("Interested car brand" + interestedBrand);
-
-            IWebDriver driver = new FirefoxDriver();
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
-
-            HomePage homePage = new HomePage(driver);
-            homePage.GotoHomePage(driver);
-
-            HomePageLocators homePageLocators = new HomePageLocators();
-            SearchResultPage searchResultPage = homePage.FindInterestBrand(driver, homePageLocators, wait, interestedBrand);
-            SearchResultPageLocators searchResultPageLocators = new SearchResultPageLocators();
-            IList<IWebElement> brandAndModelOfCarsOnPage = searchResultPage.GetBrandAndModelOfCarsOnPage(driver, wait, searchResultPageLocators);
-            foreach (IWebElement carBrandAndModel in brandAndModelOfCarsOnPage)
+            try
             {
-                Console.WriteLine(carBrandAndModel.Text);
-            }
+                //string interestedBrand = args[0];
+                string interestedBrand = "BMW";
+                Console.WriteLine("Interested car brand" + interestedBrand);
 
-            driver.Quit();
+                IWebDriver driver = new FirefoxDriver();
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
+
+                HomePage homePage = new HomePage(driver);
+                homePage.GotoHomePage(driver);
+
+                HomePageLocators homePageLocators = new HomePageLocators();
+                SearchResultPage searchResultPage = homePage.FindInterestBrand(driver, homePageLocators, wait, interestedBrand);
+                SearchResultPageLocators searchResultPageLocators = new SearchResultPageLocators();
+                IList<IWebElement> brandAndModelOfCarsOnPage = searchResultPage.GetBrandAndModelOfCarsOnPage(driver, wait, searchResultPageLocators);
+                foreach (IWebElement carBrandAndModel in brandAndModelOfCarsOnPage)
+                {
+                    Console.WriteLine(carBrandAndModel.Text);
+                }
+
+                driver.Quit();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

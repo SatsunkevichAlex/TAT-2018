@@ -1,7 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Support.PageObjects;
 using task_DEV_10.PageObjectsLocators;
 
 namespace task_DEV_10.PageObjects
@@ -14,7 +13,6 @@ namespace task_DEV_10.PageObjects
         IWebDriver driver;
         public HomePage(IWebDriver driver)
         {
-            PageFactory.InitElements(driver, this);
             this.driver = driver;
         }
         /// <summary>
