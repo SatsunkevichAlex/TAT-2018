@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using task_DEV_10.PageObjectsLocators;
-using System.Collections.Generic;
 
 namespace task_DEV_10.PageObjects
 {
@@ -16,6 +15,7 @@ namespace task_DEV_10.PageObjects
         {
             this.driver = driver;
         }
+
         /// <summary>
         /// Go to home page.
         /// </summary>
@@ -25,6 +25,7 @@ namespace task_DEV_10.PageObjects
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://av.by");
         }
+
         /// <summary>
         /// Search cars of interested brand.
         /// </summary>
