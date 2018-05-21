@@ -52,7 +52,6 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="PageObjectsLocators\Car.cs" />
     <Compile Include="PageObjectsLocators\HomePageLocators.cs" />
-    <Compile Include="PageObjectsLocators\NextPage.cs" />
     <Compile Include="PageObjectsLocators\SearchResultPageLocators.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\SearchResultPage.cs" />
