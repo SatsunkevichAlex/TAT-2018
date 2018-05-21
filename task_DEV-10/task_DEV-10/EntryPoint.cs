@@ -15,8 +15,8 @@ namespace task_DEV_10
             try
             {
                 //string interestedBrand = args[0];
-                string interestedBrand = "BMW";
-                Console.WriteLine("Interested car brand" + interestedBrand);
+                string selectedBrand = "Acura";
+                Console.WriteLine("Selected car brand " + selectedBrand);
 
                 IWebDriver driver = new FirefoxDriver();
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
@@ -25,19 +25,15 @@ namespace task_DEV_10
                 homePage.GotoHomePage(driver);
 
                 HomePageLocators homePageLocators = new HomePageLocators();
-                SearchResultPage searchResultPage = homePage.FindInterestBrand(driver, homePageLocators, wait, interestedBrand);
+                SearchResultPage searchResultPage = homePage.FindInterestBrand(driver, homePageLocators, wait, selectedBrand);
                 SearchResultPageLocators searchResultPageLocators = new SearchResultPageLocators();
-                IList<IWebElement> brandAndModelOfCarsOnPage = searchResultPage.GetBrandAndModelOfCarsOnPage(driver, wait, searchResultPageLocators);
-                foreach (IWebElement carBrandAndModel in brandAndModelOfCarsOnPage)
-                {
-                    Console.WriteLine(carBrandAndModel.Text);
-                }
+                searchResultPage.OutputSortedCars(searchResultPage.SortedCarsList(searchResultPage.GetCarsAllPages(driver, searchResultPageLocators, wait)));
 
                 driver.Quit();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }
