@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{72B044F5-A92A-41DE-A05A-E4BEFF562EB3}</ProjectGuid>
+    <ProjectGuid>{CE3DCC16-5CFE-4525-B949-C5EE8EFAE28B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>task_DEV_2</RootNamespace>
     <AssemblyName>task_DEV-2</AssemblyName>
@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
-    <Compile Include="StringCreater.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SequenceCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
