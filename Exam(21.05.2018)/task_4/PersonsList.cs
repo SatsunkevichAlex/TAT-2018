@@ -1,39 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace task_3
 {
     /// <summary>
-    /// Person.
+    /// List of persons.
     /// </summary>
-    class Person
+    class PersonsList
     {
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public int Age { get; set; }
-        public Person()
-        {
-            this.FirstName = Console.ReadLine();
-            this.SecondName = Console.ReadLine();
-            try
-            {
-                this.Age = int.Parse(Console.ReadLine());
-            }
-            catch(Exception)
-            {
-                throw new Exception("Invalid age input!");
-            }
-        }
+        List<Person> persons = new List<Person>();
         /// <summary>
         /// Add perons to list.
         /// </summary>
         /// <param name="person"></param>
         /// <param name="persons"></param>
         /// <returns>List of persons.</returns>
-        public List<Person> AddPerson(Person person)
+        public List<Person> AddPerson()
         {
-            List<Person> persons = new List<Person>();
+            //List<Person> persons = new List<Person>();
             while (Console.ReadKey(true).Key != ConsoleKey.Escape)
             {
                 persons.Add(new Person());
@@ -44,7 +29,7 @@ namespace task_3
         /// Output Persons.
         /// </summary>
         /// <param name="persons"></param>
-        public void OutputPersons(List<Person> persons)
+        public void OutputPersons()
         {
             foreach (Person person in persons)
             {
@@ -54,9 +39,8 @@ namespace task_3
         /// <summary>
         /// Find minimal age in persons list.
         /// </summary>
-        /// <param name="persons"></param>
         /// <returns>Minimal age.</returns>
-        public int MinAge(List<Person> persons)
+        public int MinAge()
         {
             int minAge = persons.Min(p => p.Age);
             return minAge;
@@ -64,18 +48,16 @@ namespace task_3
         /// <summary>
         /// Find maximal age in persons list.
         /// </summary>
-        /// <param name="persons"></param>
         /// <returns>Maximal age.</returns>
-        public int MaxAge(List<Person> persons)
+        public int MaxAge()
         {
             return persons.Max(p => p.Age);
         }
         /// <summary>
         /// Calculate average age in persons list within hundredths.
         /// </summary>
-        /// <param name="persons"></param>
         /// <returns>Average age in persons list within hundredths.</returns>
-        public double AverageAge(List<Person> persons)
+        public double AverageAge()
         {
             return Math.Round(persons.Average(p => p.Age), 2);
         }

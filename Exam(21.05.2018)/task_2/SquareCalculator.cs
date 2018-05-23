@@ -8,7 +8,7 @@ namespace task_2
     public class SquareCalculator
     {
         /// <summary>
-        /// Colculate square (S = a*b).
+        /// Calculate square (S = a*b).
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
